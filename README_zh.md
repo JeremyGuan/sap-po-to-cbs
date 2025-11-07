@@ -42,10 +42,18 @@ java代码详见https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/JAVA_MAPPI
 <img width="1366" height="673" alt="image" src="https://github.com/user-attachments/assets/18fb0b4d-ee05-4934-b337-55a306578ca0" />
 1. 创建EJB Project
 <img width="1117" height="623" alt="image" src="https://github.com/user-attachments/assets/f6d6223d-cf83-4f0e-b6ab-48d933087375" />
-<img width="511" height="761" alt="image" src="https://github.com/user-attachments/assets/34b8b2aa-bff8-4c24-b462-d3419f90fa2b" />
+<img width="511" height="761" alt="image" src="https://github.com/user-attachments/assets/592a22a7-0d2b-435c-9b00-a6b5fb02b503" />
 <img width="511" height="761" alt="image" src="https://github.com/user-attachments/assets/28c8cf2c-11e0-46cb-83f9-160b3c133605" />
+<img width="761" height="708" alt="image" src="https://github.com/user-attachments/assets/d8b2de32-18a5-4b87-97d6-9127db015f77" />
+<img width="511" height="505" alt="image" src="https://github.com/user-attachments/assets/c3f41201-0ba2-465d-8c2e-b6ede9ab1294" />
+增加Library
+<img width="1063" height="791" alt="image" src="https://github.com/user-attachments/assets/d906edd3-d712-43dd-998e-0dc36fe3f2e2" />
+修改这3个文件
+<img width="345" height="547" alt="image" src="https://github.com/user-attachments/assets/688c3d22-4b61-46fe-886c-f71a5b97609d" />
 
-2. 部署
+
+
+3. 部署
 
 注意：
 - 部署时可能出现错误，有可能是第三方jar包版本冲突，此时为了验证，可以移除第三方包之后部署试试，没办法，只能下载不同版本的jar包尝试了，还在在https://mvnrepository.com/下载
