@@ -3,12 +3,14 @@
 开发工具：NWDS
 系统版本：NW750EXT_16_REL
 
+已打包好可直接部署的代码---> java mapping-->
+                      ---> ejb
+
 ## 验签&报文加密
 总结：使用JAVA Mapping做sign计算及报文加密
 <img width="1483" height="373" alt="image" src="https://github.com/user-attachments/assets/8ae5f7d8-c811-4789-989a-5fbb2ef7ad6e" />
 
-### 创建JAVA Mapping
-1. 创建JAVA Project
+### 1. 创建JAVA Project
 <img width="1220" height="681" alt="image" src="https://github.com/user-attachments/assets/931f6814-d14c-4b07-9389-9ca103885353" />
 <img width="536" height="778" alt="image" src="https://github.com/user-attachments/assets/c3a25b1f-2c3a-4c15-a2d0-2258972cafb0" />
 增加Library
@@ -26,21 +28,21 @@ bcprov-jdk15on-1.60.jar或者bcprov-jdk18on-1.78.1.jar
 
 java代码详见https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/JAVA_MAPPING
 
-2. 打包自开发java mapping包
+### 2. 打包自开发java mapping包
 <img width="929" height="553" alt="image" src="https://github.com/user-attachments/assets/991697f2-55f4-4a27-a1eb-41c17dd52511" />
 
-3. 第三方jar包上传
+### 3. 第三方jar包上传
 因java mapping中使用了第三方包，此时需要上传相关包才能确保java mapping正常使用
 <img width="895" height="584" alt="image" src="https://github.com/user-attachments/assets/0a0aa105-b00b-4bf7-b954-fc4f911bee79" />
 
-3. 在OM中使用自开发java mapping
+### 4. 在OM中使用自开发java mapping
 <img width="1486" height="620" alt="image" src="https://github.com/user-attachments/assets/f8320631-4aaf-455f-bee8-8900c3f85e59" />
 
 
 ## 报文解密
 总结：使用Communication Channel Module做报文解密
 <img width="1366" height="673" alt="image" src="https://github.com/user-attachments/assets/18fb0b4d-ee05-4934-b337-55a306578ca0" />
-1. 创建EJB Project
+### 1. 创建EJB Project
 <img width="1117" height="623" alt="image" src="https://github.com/user-attachments/assets/f6d6223d-cf83-4f0e-b6ab-48d933087375" />
 <img width="511" height="761" alt="image" src="https://github.com/user-attachments/assets/592a22a7-0d2b-435c-9b00-a6b5fb02b503" />
 <img width="511" height="761" alt="image" src="https://github.com/user-attachments/assets/28c8cf2c-11e0-46cb-83f9-160b3c133605" />
@@ -64,8 +66,31 @@ bcprov-jdk15on-1.60.jar
 直接新增class，把官方代码贴进去即可，有log输出相关报错的，直接注释即可
 <img width="375" height="303" alt="image" src="https://github.com/user-attachments/assets/2c284227-9b26-47d0-8c06-2eb1c287741a" />
 
+tooltest.java核心代码https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/tooltest.java
 
-3. 部署
+### 2. 部署
+
+#### 测试系统部署
+添加SAP AS Java服务
+<img width="808" height="746" alt="image" src="https://github.com/user-attachments/assets/cfb4ed4a-7066-4a99-8340-ed1914dca268" />
+
+<img width="790" height="592" alt="image" src="https://github.com/user-attachments/assets/17be507e-b9ae-4c15-aa0f-0ccc0f551fe9" />
+<img width="543" height="697" alt="image" src="https://github.com/user-attachments/assets/4d8736ea-57f2-4b20-be7a-19c5dac17097" />
+<img width="543" height="697" alt="image" src="https://github.com/user-attachments/assets/e688d1f2-8ca2-4190-9b5d-66c74e198a1b" />
+
+
+#### 生产系统部署
+打包
+<img width="675" height="341" alt="image" src="https://github.com/user-attachments/assets/a93aa879-6a22-4349-a8d3-32f423797a07" />
+<img width="685" height="445" alt="image" src="https://github.com/user-attachments/assets/21a7d495-4989-4804-bb8f-6f6515c3dcea" />
+
+上传至生产系统服务器
+命令：telnet localhost 50008
+<img width="922" height="310" alt="image" src="https://github.com/user-attachments/assets/a42a6b6a-2371-442c-b6cc-e1fd23db1b31" />
+
+命令：deploy 文件路径 version_rule=all
+<img width="894" height="298" alt="image" src="https://github.com/user-attachments/assets/b2dba386-b74c-4718-8a28-cc0fd488a561" />
+
 
 注意：
 - 部署时可能出现错误，有可能是第三方jar包版本冲突，此时为了验证，可以移除第三方包之后部署试试，没办法，只能下载不同版本的jar包尝试了，还在在https://mvnrepository.com/下载
