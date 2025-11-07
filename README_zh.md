@@ -3,8 +3,9 @@
 开发工具：NWDS
 系统版本：NW750EXT_16_REL
 
-已打包好可直接部署的代码---> java mapping--> https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/cbsSign.jar
-                      ---> ejb -> https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/cbs8Decryption_EAR.ear
+已打包好可直接部署的代码
+- java mapping--> https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/cbsSign.jar
+- ejb -> https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/cbs8Decryption_EAR.ear
 
 ## 验签&报文加密
 总结：使用JAVA Mapping做sign计算及报文加密
@@ -21,9 +22,9 @@ XPI映射库是安装NWDS时自带的
 增加第三方jar包
 本例用到了json/org.apache.commons.codec/bcprov,直接到https://mvnrepository.com/下载即可
 注意版本：
-json-20230227.jar
-org.apache.commons.codec-1.14.0.v20200818-1422.jar
-bcprov-jdk15on-1.60.jar或者bcprov-jdk18on-1.78.1.jar
+- json-20230227.jar
+- org.apache.commons.codec-1.14.0.v20200818-1422.jar
+- bcprov-jdk15on-1.60.jar或者bcprov-jdk18on-1.78.1.jar
 如果出现异常，请直接按截图版本下载
 
 java代码详见https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/JAVA_MAPPING
