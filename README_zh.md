@@ -46,11 +46,23 @@ java代码详见https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/JAVA_MAPPI
 <img width="511" height="761" alt="image" src="https://github.com/user-attachments/assets/28c8cf2c-11e0-46cb-83f9-160b3c133605" />
 <img width="761" height="708" alt="image" src="https://github.com/user-attachments/assets/d8b2de32-18a5-4b87-97d6-9127db015f77" />
 <img width="511" height="505" alt="image" src="https://github.com/user-attachments/assets/c3f41201-0ba2-465d-8c2e-b6ede9ab1294" />
-增加Library
-<img width="1063" height="791" alt="image" src="https://github.com/user-attachments/assets/d906edd3-d712-43dd-998e-0dc36fe3f2e2" />
+
 修改这3个文件
 <img width="345" height="547" alt="image" src="https://github.com/user-attachments/assets/688c3d22-4b61-46fe-886c-f71a5b97609d" />
+https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/application-j2ee-engine.xml
+https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/ejb-j2ee-engine.xml
+https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/ejb-jar.xml
+增加Library
+<img width="1063" height="791" alt="image" src="https://github.com/user-attachments/assets/d906edd3-d712-43dd-998e-0dc36fe3f2e2" />
+第三方Library
+json-20230227.jar
+org.apache.commons.io_2.2.0.v201405211200.jar
+bcprov-jdk15on-1.60.jar
+下载地址https://mvnrepository.com/
 
+新增官方加密解密工具包
+直接新增class，把官方代码贴进去即可，有log输出相关报错的，直接注释即可
+<img width="375" height="303" alt="image" src="https://github.com/user-attachments/assets/2c284227-9b26-47d0-8c06-2eb1c287741a" />
 
 
 3. 部署
