@@ -22,10 +22,10 @@ XPI映射库是安装NWDS时自带的
 增加第三方jar包
 本例用到了json/org.apache.commons.codec/bcprov,直接到https://mvnrepository.com/下载即可
 注意版本：
-- json-20230227.jar
-- org.apache.commons.codec-1.14.0.v20200818-1422.jar
-- bcprov-jdk15on-1.60.jar或者bcprov-jdk18on-1.78.1.jar
-如果出现异常，请直接按截图版本下载
+-  json-20230227.jar
+-  org.apache.commons.codec-1.14.0.v20200818-1422.jar
+-  cprov-jdk15on-1.60.jar或者bcprov-jdk18on-1.78.1.jar
+-  如果出现异常，请直接按截图版本下载
 
 java代码详见https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/JAVA_MAPPING
 
@@ -112,3 +112,7 @@ nodeName  最外层添加的xml标签名
 
 注意：
 - 部署时可能出现错误，有可能是第三方jar包版本冲突，此时为了验证，可以移除第三方包之后部署试试，没办法，只能下载不同版本的jar包尝试了，还在在https://mvnrepository.com/下载
+
+如果以上信息对你有帮助，欢迎交流
+![9c0f0750-ce1b-4c80-ad0e-65c3eae3c2a0](https://github.com/user-attachments/assets/d18b09ed-b053-44d6-a782-36946d518b48)
+
