@@ -3,8 +3,8 @@
 开发工具：NWDS
 系统版本：NW750EXT_16_REL
 
-已打包好可直接部署的代码---> java mapping-->
-                      ---> ejb
+已打包好可直接部署的代码---> java mapping--> https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/cbsSign.jar
+                      ---> ejb -> https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/cbs8Decryption_EAR.ear
 
 ## 验签&报文加密
 总结：使用JAVA Mapping做sign计算及报文加密
@@ -37,6 +37,15 @@ java代码详见https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/JAVA_MAPPI
 
 ### 4. 在OM中使用自开发java mapping
 <img width="1486" height="620" alt="image" src="https://github.com/user-attachments/assets/f8320631-4aaf-455f-bee8-8900c3f85e59" />
+
+### 5. DT入参说明
+<img width="1491" height="573" alt="image" src="https://github.com/user-attachments/assets/c1c7d80b-f455-4183-ab0f-8fab6f6f0acf" />
+bodyEncryptionKey 平台公钥，报文加密使用
+EncryptionPrivateKey 签名私钥
+Token 通过接口获取到的token
+addSquare 是否增加最外层[],有些报文是是{ }， 有些报文是[{ }]，用于增加最外层的[]
+data  这里要固定，因为java mapping中是默认取data中的数据作为发送报文，有特殊需求自行修改代码
+注意大小写
 
 
 ## 报文解密
@@ -90,6 +99,14 @@ tooltest.java核心代码https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/t
 
 命令：deploy 文件路径 version_rule=all
 <img width="894" height="298" alt="image" src="https://github.com/user-attachments/assets/b2dba386-b74c-4718-8a28-cc0fd488a561" />
+
+### 3. 使用方式
+在CC中增加module，这里我设置了3个参数，分别是
+bodyDecryptionKey  解密使用
+nameSpace  命名空间
+nodeName  最外层添加的xml标签名
+注意大小写
+<img width="1541" height="688" alt="image" src="https://github.com/user-attachments/assets/6cb01ea6-70d0-4d1e-b21c-7fd9059fc749" />
 
 
 注意：
