@@ -8,7 +8,7 @@
 - ejb -> https://github.com/JeremyGuan/sap-po-to-cbs/blob/main/cbs8Decryption_EAR.ear
 
 ## 验签&报文加密
-总结：使用JAVA Mapping做sign计算及报文加密
+总结：使用JAVA Mapping做sign计算及报文加密，用Adapter-Specfic Attribute传递参数
 <img width="1483" height="373" alt="image" src="https://github.com/user-attachments/assets/8ae5f7d8-c811-4789-989a-5fbb2ef7ad6e" />
 
 ### 1. 创建JAVA Project
@@ -47,6 +47,15 @@ Token 通过接口获取到的token
 addSquare 是否增加最外层[],有些报文是是{ }， 有些报文是[{ }]，用于增加最外层的[]
 data  这里要固定，因为java mapping中是默认取data中的数据作为发送报文，有特殊需求自行修改代码
 注意大小写
+
+### 6. 在CC中设置参数
+注意：Attribute Name是在代码中硬编码的，调整Name涉及到java mapping代码调整
+<img width="1112" height="610" alt="image" src="https://github.com/user-attachments/assets/129a5c19-f582-458e-b166-13076cef7e52" />
+<img width="1232" height="241" alt="image" src="https://github.com/user-attachments/assets/bf8ad1a0-9aeb-44dc-84fa-0004ae566101" />
+
+注意这里的Data Format
+请求和返回报文Format设置为Binary
+<img width="1106" height="293" alt="image" src="https://github.com/user-attachments/assets/2cb2c5bf-f20a-4522-95a3-374245bef74a" />
 
 
 ## 报文解密
@@ -108,6 +117,9 @@ nameSpace  命名空间
 nodeName  最外层添加的xml标签名
 注意大小写
 <img width="1541" height="688" alt="image" src="https://github.com/user-attachments/assets/6cb01ea6-70d0-4d1e-b21c-7fd9059fc749" />
+
+### 4. CC其他设置
+<img width="1106" height="293" alt="image" src="https://github.com/user-attachments/assets/1e8231a2-52ad-468c-bc49-d202a689f9a3" />
 
 
 注意：
